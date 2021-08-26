@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Rampart+One&family=Share+Tech+Mono&display=swap');
+
+$default-border: 4px solid #D4F9C9; 
+$default-border-raduis: 0 20px;
+
+.App {
+  text-align: center;
+  .App-header {
+    background-color: #3D6228;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    .editor{
+      margin-top: 3vh;
+      background-color: #D4F9C9;
+      padding: 5px;
+      border-radius: $default-border-raduis;
+      header{
+        display: flex;
+        justify-content: flex-start;
+        color:#000;
+        font-size: 1em;
+        font-family: 'Electrolize', sans-serif;
+        height: 1.1em; 
+      }
+      #editor {
+        width: 60vw;
+        min-height: 30vh;
+        outline: none;
+        border-style: none;
+        border-radius: $default-border-raduis;
+        position: relative;
+        top: 10px;
+        font-size: 1rem;
+        font-family: 'Share Tech Mono', monospace;
+        padding: 5px;
+      }
+      #editor:focus{
+        border: 2px solid #8AC8BC;
+      }
+    }
+    .preview{
+      @extend .editor;
+      header{
+        display: flex;
+        justify-content: flex-start;
+        color:#000;
+        font-size: 0.8em;
+        font-family: 'Electrolize', sans-serif;
+        height:1.5em; 
+      }
+      #preview{
+        background-color: #F4FFF1;
+        color: #000;
+        width: 60vw;
+        min-height: 50vh;
+        outline: none;
+        border-style: none;
+        border-radius: $default-border-raduis;
+        font-size: 1rem;
+        font-family: 'Share Tech Mono', monospace;
+        text-align: left;
+        padding: 10px;
+        overflow-wrap: break-word;
+        blockquote {
+          border-left: 3px solid #5C1779;
+          color: #002377;
+          padding-left: 5px;
+          margin-left: 25px;
+        }
+        code {
+          background: #FFEAEA;
+          padding: 3px;
+          font-weight: bold;
+          font-size: 0.875rem;
+        }
+        pre {
+          display: block;
+          overflow: auto;
+          background: #FFEAEA ;
+          padding: 5px;
+          line-height: 1.2;
+        }
+        h1 {
+          border-bottom: 2px solid #000;
+        }
+        h2 {
+          border-bottom: 1px solid #000;
+        }
+        table {
+          border-collapse: collapse;
+        }
+      
+        td,
+        th {
+          border: 2px solid #000;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        img {
+          display: block;
+          width: 10vw
+        }
+        a {
+          color: #1DA1F2;
+        }
+      }
+    }
+    #da3ker{
+      color: white;
+      font-size: 0.45em;
+      letter-spacing: 2px;
+      font-family: 'Rampart One', cursive;
+    }
+  }
+}
